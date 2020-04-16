@@ -4,10 +4,13 @@ summary: Bit-cacher will store names
 description: |
   Only useful for very specific purposes
 confinement: strict
+base: core18
 
 apps:
   bit-cacher:
     command: bin/bit-cacher
+    daemon: simple
+    adapters: none
     plugs: [network-bind]
 
 parts:
